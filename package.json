@@ -1,0 +1,29 @@
+{
+  "name": "url-shortener",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node dist/server.js",
+    "babel": "babel src -w -d dist",
+    "dev": "npm run babel & nodemon dist/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lukawski/url-shortener.git"
+  },
+  "author": "Kacper Łukawski",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lukawski/url-shortener/issues"
+  },
+  "homepage": "https://github.com/lukawski/url-shortener#readme",
+  "dependencies": {
+    "express": "^4.14.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.23.0",
+    "babel-preset-latest": "^6.22.0"
+  }
+}
