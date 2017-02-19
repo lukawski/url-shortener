@@ -4,7 +4,7 @@ import Url from '../models/Url'
 import Counter from '../models/Counter'
 import generateUrl from '../utilities/urlGenerate'
 
-const router = express.Router()1
+const router = express.Router()
 
 router.get('/:url*', (req, res) => {
   console.log(req.hostname, req.protocol)
