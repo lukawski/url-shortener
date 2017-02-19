@@ -20,7 +20,8 @@
   },
   "homepage": "https://github.com/lukawski/url-shortener#readme",
   "dependencies": {
-    "express": "^4.14.1"
+    "express": "^4.14.1",
+    "mongoose": "^4.8.3"
   },
   "devDependencies": {
     "babel-cli": "^6.23.0",
