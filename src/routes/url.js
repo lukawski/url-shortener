@@ -1,5 +1,4 @@
 import express from 'express'
-import mongoose from 'mongoose'
 import Url from '../models/Url'
 import Counter from '../models/Counter'
 import generateUrl from '../utilities/urlGenerate'
@@ -7,8 +6,6 @@ import generateUrl from '../utilities/urlGenerate'
 const router = express.Router()
 
 router.get('/:url*', (req, res) => {
-  console.log(req.hostname, req.protocol)
-  global.counter++
   let url = req.url.slice(1)
   if (!testUrl(url)) return res.send('Invalid url')
 
@@ -19,7 +16,7 @@ router.get('/:url*', (req, res) => {
     } else {
       Counter.findOneAndUpdate({_id: 'url_counter'}, {$inc: {urlCount: 1}}, {new: true}, (err, data) => {
         if (err) return console.log(`Error finding counter in db, ${err}`)
-        console.log(data.urlCount, data)
+
         let urlObject = new Url({
           _id: data.urlCount,
           originalUrl: url,
