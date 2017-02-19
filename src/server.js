@@ -6,7 +6,7 @@ const app = express()
 const port = process.env.PORT || 3000
 
 mongoose.Promise = global.Promise
-mongoose.connect('mongodb://localhost/urls')
+mongoose.connect('mongodb://admin:admin@ds155509.mlab.com:55509/urls')
   .then(() => console.log('Connected'))
   .catch((err) => console.log(err))
 
