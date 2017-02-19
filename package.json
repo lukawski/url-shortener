@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node dist/server.js",
     "babel": "babel src -w -d dist",
-    "postinstall": "babel src -w -d dist",
+    "postinstall": "babel src -d dist",
     "dev": "npm run babel & nodemon dist/server.js"
   },
   "repository": {
